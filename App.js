@@ -7,13 +7,20 @@
  */
 
 import React, {Component} from 'react';
-import { Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 // import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import RegisterPage from './RegisterPage.js';
 import HomePage from './HomePage.js';
 
-export class LoginPage extends Component {
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  android:
+    'Double tap R on your keyboard to reload,\n' +
+    'Shake or press menu button for dev menu',
+});
+
+export default class LoginPage extends Component {
   retnder() {
     return (
       <View style = {styles.container}>
@@ -61,7 +68,7 @@ const AppStackNavigator = createStackNavigator({
   Home: HomePage
 });
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     padding:  20,
     flex: 1,
@@ -92,4 +99,4 @@ const styles = {
     color: '#ecf0f1',
     fontSize: 20
   }
-}
+});

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 // import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 

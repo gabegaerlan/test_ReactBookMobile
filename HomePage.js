@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, Button, View, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+// import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class HomePage extends Component {
     render() {
@@ -13,7 +13,7 @@ export default class HomePage extends Component {
     }
 }
 
-const styles = {
+const styles = StyleSheet.create({
     container: {
         padding:  20,
         flex: 1,
@@ -27,4 +27,4 @@ const styles = {
         fontSize: 20
     }
 
-}
+});
